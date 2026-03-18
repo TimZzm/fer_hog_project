@@ -1,0 +1,184 @@
+[2026-03-17 20:35:13] Logging to logreg_baseline.log
+[2026-03-17 20:35:13] Starting FER2013 pipeline
+[2026-03-17 20:35:13] Loading FER2013 data
+[2026-03-17 20:35:13] Reading FER2013 CSV from ../fer2013.csv
+[2026-03-17 20:35:15] Parsed 500/28709 rows from Training
+[2026-03-17 20:35:16] Parsed 1000/28709 rows from Training
+[2026-03-17 20:35:16] Parsed 1500/28709 rows from Training
+[2026-03-17 20:35:16] Parsed 2000/28709 rows from Training
+[2026-03-17 20:35:16] Parsed 2500/28709 rows from Training
+[2026-03-17 20:35:16] Parsed 3000/28709 rows from Training
+[2026-03-17 20:35:16] Parsed 3500/28709 rows from Training
+[2026-03-17 20:35:16] Parsed 4000/28709 rows from Training
+[2026-03-17 20:35:16] Parsed 4500/28709 rows from Training
+[2026-03-17 20:35:17] Parsed 5000/28709 rows from Training
+[2026-03-17 20:35:17] Parsed 5500/28709 rows from Training
+[2026-03-17 20:35:17] Parsed 6000/28709 rows from Training
+[2026-03-17 20:35:17] Parsed 6500/28709 rows from Training
+[2026-03-17 20:35:17] Parsed 7000/28709 rows from Training
+[2026-03-17 20:35:17] Parsed 7500/28709 rows from Training
+[2026-03-17 20:35:17] Parsed 8000/28709 rows from Training
+[2026-03-17 20:35:17] Parsed 8500/28709 rows from Training
+[2026-03-17 20:35:17] Parsed 9000/28709 rows from Training
+[2026-03-17 20:35:18] Parsed 9500/28709 rows from Training
+[2026-03-17 20:35:18] Parsed 10000/28709 rows from Training
+[2026-03-17 20:35:18] Parsed 10500/28709 rows from Training
+[2026-03-17 20:35:18] Parsed 11000/28709 rows from Training
+[2026-03-17 20:35:18] Parsed 11500/28709 rows from Training
+[2026-03-17 20:35:18] Parsed 12000/28709 rows from Training
+[2026-03-17 20:35:18] Parsed 12500/28709 rows from Training
+[2026-03-17 20:35:18] Parsed 13000/28709 rows from Training
+[2026-03-17 20:35:18] Parsed 13500/28709 rows from Training
+[2026-03-17 20:35:19] Parsed 14000/28709 rows from Training
+[2026-03-17 20:35:19] Parsed 14500/28709 rows from Training
+[2026-03-17 20:35:19] Parsed 15000/28709 rows from Training
+[2026-03-17 20:35:19] Parsed 15500/28709 rows from Training
+[2026-03-17 20:35:19] Parsed 16000/28709 rows from Training
+[2026-03-17 20:35:19] Parsed 16500/28709 rows from Training
+[2026-03-17 20:35:19] Parsed 17000/28709 rows from Training
+[2026-03-17 20:35:19] Parsed 17500/28709 rows from Training
+[2026-03-17 20:35:20] Parsed 18000/28709 rows from Training
+[2026-03-17 20:35:20] Parsed 18500/28709 rows from Training
+[2026-03-17 20:35:20] Parsed 19000/28709 rows from Training
+[2026-03-17 20:35:20] Parsed 19500/28709 rows from Training
+[2026-03-17 20:35:20] Parsed 20000/28709 rows from Training
+[2026-03-17 20:35:20] Parsed 20500/28709 rows from Training
+[2026-03-17 20:35:20] Parsed 21000/28709 rows from Training
+[2026-03-17 20:35:20] Parsed 21500/28709 rows from Training
+[2026-03-17 20:35:20] Parsed 22000/28709 rows from Training
+[2026-03-17 20:35:21] Parsed 22500/28709 rows from Training
+[2026-03-17 20:35:21] Parsed 23000/28709 rows from Training
+[2026-03-17 20:35:21] Parsed 23500/28709 rows from Training
+[2026-03-17 20:35:21] Parsed 24000/28709 rows from Training
+[2026-03-17 20:35:21] Parsed 24500/28709 rows from Training
+[2026-03-17 20:35:21] Parsed 25000/28709 rows from Training
+[2026-03-17 20:35:21] Parsed 25500/28709 rows from Training
+[2026-03-17 20:35:21] Parsed 26000/28709 rows from Training
+[2026-03-17 20:35:21] Parsed 26500/28709 rows from Training
+[2026-03-17 20:35:22] Parsed 27000/28709 rows from Training
+[2026-03-17 20:35:22] Parsed 27500/28709 rows from Training
+[2026-03-17 20:35:22] Parsed 28000/28709 rows from Training
+[2026-03-17 20:35:22] Parsed 28500/28709 rows from Training
+[2026-03-17 20:35:22] Parsed 28709/28709 rows from Training
+[2026-03-17 20:35:22] Parsed 500/3589 rows from PublicTest
+[2026-03-17 20:35:22] Parsed 1000/3589 rows from PublicTest
+[2026-03-17 20:35:22] Parsed 1500/3589 rows from PublicTest
+[2026-03-17 20:35:22] Parsed 2000/3589 rows from PublicTest
+[2026-03-17 20:35:22] Parsed 2500/3589 rows from PublicTest
+[2026-03-17 20:35:23] Parsed 3000/3589 rows from PublicTest
+[2026-03-17 20:35:23] Parsed 3500/3589 rows from PublicTest
+[2026-03-17 20:35:23] Parsed 3589/3589 rows from PublicTest
+[2026-03-17 20:35:23] Parsed 500/3589 rows from PrivateTest
+[2026-03-17 20:35:23] Parsed 1000/3589 rows from PrivateTest
+[2026-03-17 20:35:23] Parsed 1500/3589 rows from PrivateTest
+[2026-03-17 20:35:23] Parsed 2000/3589 rows from PrivateTest
+[2026-03-17 20:35:23] Parsed 2500/3589 rows from PrivateTest
+[2026-03-17 20:35:23] Parsed 3000/3589 rows from PrivateTest
+[2026-03-17 20:35:24] Parsed 3500/3589 rows from PrivateTest
+[2026-03-17 20:35:24] Parsed 3589/3589 rows from PrivateTest
+[2026-03-17 20:35:24] Dataset summary printed
+[2026-03-17 20:35:24] Running correctness checks
+[2026-03-17 20:35:24] Correctness check for numpy: max_abs_diff=0.000000e+00, max_rel_diff=0.000000e+00
+[2026-03-17 20:35:24] Correctness check for numba: max_abs_diff=1.192093e-07, max_rel_diff=1.457730e-07
+[2026-03-17 20:35:24] Benchmarking HOG implementations on 100 training images
+[2026-03-17 20:35:28] Extracting training features with baseline
+[2026-03-17 20:35:36] HOG train: processed 500/28709 images
+[2026-03-17 20:35:44] HOG train: processed 1000/28709 images
+[2026-03-17 20:35:52] HOG train: processed 1500/28709 images
+[2026-03-17 20:36:00] HOG train: processed 2000/28709 images
+[2026-03-17 20:36:08] HOG train: processed 2500/28709 images
+[2026-03-17 20:36:16] HOG train: processed 3000/28709 images
+[2026-03-17 20:36:24] HOG train: processed 3500/28709 images
+[2026-03-17 20:36:32] HOG train: processed 4000/28709 images
+[2026-03-17 20:36:40] HOG train: processed 4500/28709 images
+[2026-03-17 20:36:48] HOG train: processed 5000/28709 images
+[2026-03-17 20:36:56] HOG train: processed 5500/28709 images
+[2026-03-17 20:37:04] HOG train: processed 6000/28709 images
+[2026-03-17 20:37:12] HOG train: processed 6500/28709 images
+[2026-03-17 20:37:20] HOG train: processed 7000/28709 images
+[2026-03-17 20:37:28] HOG train: processed 7500/28709 images
+[2026-03-17 20:37:36] HOG train: processed 8000/28709 images
+[2026-03-17 20:37:44] HOG train: processed 8500/28709 images
+[2026-03-17 20:37:52] HOG train: processed 9000/28709 images
+[2026-03-17 20:38:00] HOG train: processed 9500/28709 images
+[2026-03-17 20:38:08] HOG train: processed 10000/28709 images
+[2026-03-17 20:38:16] HOG train: processed 10500/28709 images
+[2026-03-17 20:38:24] HOG train: processed 11000/28709 images
+[2026-03-17 20:38:32] HOG train: processed 11500/28709 images
+[2026-03-17 20:38:40] HOG train: processed 12000/28709 images
+[2026-03-17 20:38:48] HOG train: processed 12500/28709 images
+[2026-03-17 20:38:56] HOG train: processed 13000/28709 images
+[2026-03-17 20:39:04] HOG train: processed 13500/28709 images
+[2026-03-17 20:39:12] HOG train: processed 14000/28709 images
+[2026-03-17 20:39:20] HOG train: processed 14500/28709 images
+[2026-03-17 20:39:28] HOG train: processed 15000/28709 images
+[2026-03-17 20:39:36] HOG train: processed 15500/28709 images
+[2026-03-17 20:39:44] HOG train: processed 16000/28709 images
+[2026-03-17 20:39:52] HOG train: processed 16500/28709 images
+[2026-03-17 20:40:00] HOG train: processed 17000/28709 images
+[2026-03-17 20:40:08] HOG train: processed 17500/28709 images
+[2026-03-17 20:40:17] HOG train: processed 18000/28709 images
+[2026-03-17 20:40:25] HOG train: processed 18500/28709 images
+[2026-03-17 20:40:33] HOG train: processed 19000/28709 images
+[2026-03-17 20:40:41] HOG train: processed 19500/28709 images
+[2026-03-17 20:40:49] HOG train: processed 20000/28709 images
+[2026-03-17 20:40:57] HOG train: processed 20500/28709 images
+[2026-03-17 20:41:05] HOG train: processed 21000/28709 images
+[2026-03-17 20:41:13] HOG train: processed 21500/28709 images
+[2026-03-17 20:41:21] HOG train: processed 22000/28709 images
+[2026-03-17 20:41:29] HOG train: processed 22500/28709 images
+[2026-03-17 20:41:37] HOG train: processed 23000/28709 images
+[2026-03-17 20:41:45] HOG train: processed 23500/28709 images
+[2026-03-17 20:41:53] HOG train: processed 24000/28709 images
+[2026-03-17 20:42:01] HOG train: processed 24500/28709 images
+[2026-03-17 20:42:09] HOG train: processed 25000/28709 images
+[2026-03-17 20:42:17] HOG train: processed 25500/28709 images
+[2026-03-17 20:42:25] HOG train: processed 26000/28709 images
+[2026-03-17 20:42:33] HOG train: processed 26500/28709 images
+[2026-03-17 20:42:41] HOG train: processed 27000/28709 images
+[2026-03-17 20:42:49] HOG train: processed 27500/28709 images
+[2026-03-17 20:42:57] HOG train: processed 28000/28709 images
+[2026-03-17 20:43:05] HOG train: processed 28500/28709 images
+[2026-03-17 20:43:08] HOG train: processed 28709/28709 images
+[2026-03-17 20:43:08] Extracting public test features with baseline
+[2026-03-17 20:43:16] HOG public: processed 500/3589 images
+[2026-03-17 20:43:24] HOG public: processed 1000/3589 images
+[2026-03-17 20:43:32] HOG public: processed 1500/3589 images
+[2026-03-17 20:43:40] HOG public: processed 2000/3589 images
+[2026-03-17 20:43:48] HOG public: processed 2500/3589 images
+[2026-03-17 20:43:56] HOG public: processed 3000/3589 images
+[2026-03-17 20:44:04] HOG public: processed 3500/3589 images
+[2026-03-17 20:44:06] HOG public: processed 3589/3589 images
+[2026-03-17 20:44:06] Extracting private test features with baseline
+[2026-03-17 20:44:14] HOG private: processed 500/3589 images
+[2026-03-17 20:44:22] HOG private: processed 1000/3589 images
+[2026-03-17 20:44:30] HOG private: processed 1500/3589 images
+[2026-03-17 20:44:38] HOG private: processed 2000/3589 images
+[2026-03-17 20:44:46] HOG private: processed 2500/3589 images
+[2026-03-17 20:44:54] HOG private: processed 3000/3589 images
+[2026-03-17 20:45:02] HOG private: processed 3500/3589 images
+[2026-03-17 20:45:03] HOG private: processed 3589/3589 images
+[2026-03-17 20:45:03] Training classifier: logreg
+[2026-03-17 20:46:27] Evaluating on PublicTest
+[2026-03-17 20:46:27] Evaluating on PrivateTest
+[2026-03-17 20:46:27] Evaluating on combined test set
+[2026-03-17 20:46:27] PublicTest accuracy: 0.4494
+[2026-03-17 20:46:27] PrivateTest accuracy: 0.4558
+[2026-03-17 20:46:27] Combined accuracy: 0.4526
+[2026-03-17 20:46:27] Benchmarks
+[2026-03-17 20:46:27] Stage                             Seconds      Items    Sec/Image      Img/Sec
+[2026-03-17 20:46:27] ------------------------------------------------------------------------------
+[2026-03-17 20:46:27] csv_load:fast                     10.8771                                     
+[2026-03-17 20:46:27] hog:baseline                       1.5890        100     0.015890        62.93
+[2026-03-17 20:46:27] hog:numpy                          0.3567        100     0.003567       280.32
+[2026-03-17 20:46:27] hog:numba                          0.0069        100     0.000069     14516.33
+[2026-03-17 20:46:27] hog:parallel-numpy                 0.7160        100     0.007160       139.67
+[2026-03-17 20:46:27] hog:parallel-numba                 1.1059        100     0.011059        90.42
+[2026-03-17 20:46:27] feature_train:baseline           460.4768      28709     0.016039        62.35
+[2026-03-17 20:46:27] feature_public:baseline           57.5696       3589     0.016041        62.34
+[2026-03-17 20:46:27] feature_private:baseline          57.5462       3589     0.016034        62.37
+[2026-03-17 20:46:27] classifier_fit:logreg             83.7853      28709     0.002918       342.65
+[2026-03-17 20:46:27] classifier_eval:public             0.0359       3589     0.000010    100053.90
+[2026-03-17 20:46:27] classifier_eval:private            0.0171       3589     0.000005    209751.69
+[2026-03-17 20:46:27] classifier_eval:combined           0.0510       7178     0.000007    140673.27
+[2026-03-17 20:46:27] Pipeline complete
