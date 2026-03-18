@@ -11,6 +11,14 @@ The main goal is not to chase state-of-the-art accuracy. The goal is to show a c
 
 The project is organized to be beginner-friendly and easy to run locally.
 
+Outputs:
+
+- logreg_baseline.log (pure HOG, no optimization)
+- logreg_numpy.log (with numpy)
+- logreg_numpy_numba.log (with numpy + numba)
+- logreg_numpy_parallel.log (with numpy + parallel)
+- logreg_numpy_numba_parallel.log (with numpy + numba + parallel)
+
 ## What It Does
 
 - Loads FER2013 directly from the original CSV format
