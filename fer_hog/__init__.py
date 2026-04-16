@@ -7,6 +7,16 @@
   --csv ../fer2013.csv \
   --implementation baseline \
   --classifier logreg \
+  --limit-train 300 \
+  --limit-public 100 \
+  --limit-private 100 \
+  --log-file baseline_small.log
+
+
+~/miniforge3/envs/dedalus22/bin/python run_pipeline.py \
+  --csv ../fer2013.csv \
+  --implementation baseline \
+  --classifier logreg \
   --log-file logreg_baseline.log
 
 ~/miniforge3/envs/dedalus22/bin/python run_pipeline.py \

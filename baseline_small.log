@@ -1,42 +1,42 @@
-[2026-03-17 18:59:22] Logging to baseline_small.log
-[2026-03-17 18:59:22] Starting FER2013 pipeline
-[2026-03-17 18:59:22] Loading FER2013 data
-[2026-03-17 18:59:22] Reading FER2013 CSV from ../fer2013.csv
-[2026-03-17 18:59:25] Parsed 300/300 rows from Training
-[2026-03-17 18:59:25] Parsed 100/100 rows from PublicTest
-[2026-03-17 18:59:25] Parsed 100/100 rows from PrivateTest
-[2026-03-17 18:59:25] Dataset summary printed
-[2026-03-17 18:59:25] Running correctness checks
-[2026-03-17 18:59:25] Correctness check for numpy: max_abs_diff=0.000000e+00, max_rel_diff=0.000000e+00
-[2026-03-17 18:59:25] Correctness check for numba: max_abs_diff=1.192093e-07, max_rel_diff=1.457730e-07
-[2026-03-17 18:59:25] Benchmarking HOG implementations on 100 training images
-[2026-03-17 18:59:30] Extracting training features with baseline
-[2026-03-17 18:59:34] HOG train: processed 300/300 images
-[2026-03-17 18:59:34] Extracting public test features with baseline
-[2026-03-17 18:59:36] HOG public: processed 100/100 images
-[2026-03-17 18:59:36] Extracting private test features with baseline
-[2026-03-17 18:59:38] HOG private: processed 100/100 images
-[2026-03-17 18:59:38] Training classifier: linear_svc
-[2026-03-17 18:59:38] Evaluating on PublicTest
-[2026-03-17 18:59:39] Evaluating on PrivateTest
-[2026-03-17 18:59:39] Evaluating on combined test set
-[2026-03-17 18:59:39] PublicTest accuracy: 0.3300
-[2026-03-17 18:59:39] PrivateTest accuracy: 0.3000
-[2026-03-17 18:59:39] Combined accuracy: 0.3150
-[2026-03-17 18:59:39] Benchmarks
-[2026-03-17 18:59:39] Stage                             Seconds      Items    Sec/Image      Img/Sec
-[2026-03-17 18:59:39] ------------------------------------------------------------------------------
-[2026-03-17 18:59:39] csv_load:fast                      2.8446                                     
-[2026-03-17 18:59:39] hog:baseline                       1.5973        100     0.015973        62.60
-[2026-03-17 18:59:39] hog:numpy                          0.3541        100     0.003541       282.39
-[2026-03-17 18:59:39] hog:numba                          0.0064        100     0.000064     15659.66
-[2026-03-17 18:59:39] hog:parallel-numpy                 0.9845        100     0.009845       101.57
-[2026-03-17 18:59:39] hog:parallel-numba                 1.1037        100     0.011037        90.61
-[2026-03-17 18:59:39] feature_train:baseline             4.8251        300     0.016084        62.18
-[2026-03-17 18:59:39] feature_public:baseline            1.6241        100     0.016241        61.57
-[2026-03-17 18:59:39] feature_private:baseline           1.5920        100     0.015920        62.82
-[2026-03-17 18:59:39] classifier_fit:linear_svc          0.9464        300     0.003155       316.97
-[2026-03-17 18:59:39] classifier_eval:public             0.0036        100     0.000036     27775.20
-[2026-03-17 18:59:39] classifier_eval:private            0.0009        100     0.000009    110854.54
-[2026-03-17 18:59:39] classifier_eval:combined           0.0017        200     0.000009    115168.70
-[2026-03-17 18:59:39] Pipeline complete
+[2026-04-15 19:44:35] Logging to baseline_small.log
+[2026-04-15 19:44:35] Starting FER2013 pipeline
+[2026-04-15 19:44:35] Loading FER2013 data
+[2026-04-15 19:44:43] Reading FER2013 CSV from ../fer2013.csv
+[2026-04-15 19:44:45] Parsed 300/300 rows from Training
+[2026-04-15 19:44:45] Parsed 100/100 rows from PublicTest
+[2026-04-15 19:44:45] Parsed 100/100 rows from PrivateTest
+[2026-04-15 19:44:45] Dataset summary printed
+[2026-04-15 19:44:45] Running correctness checks
+[2026-04-15 19:44:50] Correctness check for numpy: max_abs_diff=0.000000e+00, max_rel_diff=0.000000e+00
+[2026-04-15 19:44:50] Correctness check for numpy_numba: max_abs_diff=1.192093e-07, max_rel_diff=1.457730e-07
+[2026-04-15 19:44:50] Benchmarking HOG implementations on 100 training images
+[2026-04-15 19:44:55] Extracting training features with baseline
+[2026-04-15 19:45:00] HOG train: processed 300/300 images
+[2026-04-15 19:45:00] Extracting public test features with baseline
+[2026-04-15 19:45:02] HOG public: processed 100/100 images
+[2026-04-15 19:45:02] Extracting private test features with baseline
+[2026-04-15 19:45:04] HOG private: processed 100/100 images
+[2026-04-15 19:45:04] Training classifier: logreg
+[2026-04-15 19:45:20] Evaluating on PublicTest
+[2026-04-15 19:45:20] Evaluating on PrivateTest
+[2026-04-15 19:45:20] Evaluating on combined test set
+[2026-04-15 19:45:20] PublicTest accuracy: 0.3000
+[2026-04-15 19:45:20] PrivateTest accuracy: 0.3500
+[2026-04-15 19:45:20] Combined accuracy: 0.3250
+[2026-04-15 19:45:20] Benchmarks
+[2026-04-15 19:45:20] Stage                             Seconds      Items    Sec/Image      Img/Sec
+[2026-04-15 19:45:20] ------------------------------------------------------------------------------
+[2026-04-15 19:45:20] csv_load:fast                      9.8290                                     
+[2026-04-15 19:45:20] hog:baseline                       1.8445        100     0.018445        54.21
+[2026-04-15 19:45:20] hog:numpy                          0.4207        100     0.004207       237.67
+[2026-04-15 19:45:20] hog:numpy_numba                    0.0068        100     0.000068     14802.75
+[2026-04-15 19:45:20] hog:numpy_parallel                 0.9836        100     0.009836       101.67
+[2026-04-15 19:45:20] hog:numpy_numba_parallel           1.3763        100     0.013763        72.66
+[2026-04-15 19:45:20] feature_train:baseline             5.4770        300     0.018257        54.77
+[2026-04-15 19:45:20] feature_public:baseline            1.8300        100     0.018300        54.65
+[2026-04-15 19:45:20] feature_private:baseline           1.8333        100     0.018333        54.55
+[2026-04-15 19:45:20] classifier_fit:logreg             15.7782        300     0.052594        19.01
+[2026-04-15 19:45:20] classifier_eval:public             0.0021        100     0.000021     46808.26
+[2026-04-15 19:45:20] classifier_eval:private            0.0009        100     0.000009    110548.05
+[2026-04-15 19:45:20] classifier_eval:combined           0.0012        200     0.000006    165998.11
+[2026-04-15 19:45:20] Pipeline complete
