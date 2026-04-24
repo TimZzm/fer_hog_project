@@ -4,6 +4,10 @@ This project implements an end-to-end FER2013 facial emotion recognition pipelin
 
 The purpose of the project is not to maximize classification accuracy. The purpose is to implement HOG correctly and compare how much the same HOG representation can be accelerated with NumPy, Numba, and parallel processing.
 
+## Data
+
+The data is FER2013. This dataset originally consists of grayscale images, but it also provides a CSV version where each image is stored as a numerical array of pixel values. In this project, it is stored in the `fer2013.csv` file. **Please download the dataset from https://www.kaggle.com/datasets/deadskull7/fer2013, it is about 287.13 MB so it cannot be pushed to GitHub.**
+
 ## What HOG Is
 
 Histogram of Oriented Gradients (HOG) is a classical image descriptor that represents local shape information using edge directions.
@@ -32,6 +36,12 @@ the final HOG feature length is:
 
 The classifier is only the final stage of the pipeline. It is included mainly to verify that the optimized implementations preserve the practical effect of the HOG features rather than breaking them.
 
+### Optimizations we applied
+
+- Numpy: Applied when calculating gradient to replace the nested for-loop by numpy slicing.
+- Numba JIT: Applied when building the histogram to accelerate the nested for-loops
+- Parallel Computing: Applied across images such that we can process multiple images at the same time in different processes.
+
 ## What The Project Does
 
 - Loads FER2013 directly from the original CSV format
@@ -40,13 +50,8 @@ The classifier is only the final stage of the pipeline. It is included mainly to
   - `Training`
   - `PublicTest`
   - `PrivateTest`
-- Implements HOG from scratch with:
-  - unsigned orientations in `[0, 180)`
-  - cell size `8x8`
-  - `9` orientation bins
-  - block size `2x2` cells
-  - block stride `1` cell
-- Trains a simple multiclass classifier with scikit-learn
+- Implements HOG from scratch: calculating gradient, split the image into cells, build histograms, etc.
+- Trains a simple multiclass classifier with scikit-learn (This is not what we want to optimize. It is just used for verifying that our optimizations did not destroy the output from HOG)
 - Benchmarks CSV parsing, HOG extraction, and classifier train/inference
 - Compares baseline, NumPy, Numba, and parallel HOG variants
 - Checks optimized HOG outputs against the baseline on a few sample images
@@ -69,16 +74,6 @@ fer_hog_project/
     pipeline.py
 ```
 
-## Python Environment
-
-Use any Python environment that already contains the required packages. Replace the placeholder below with the Python executable from your own environment.
-
-Example:
-
-```bash
-<PATH_TO_YOUR_ENV_PYTHON> run_pipeline.py --help
-```
-
 ## Install Requirements
 
 If you want to prepare a fresh environment:
@@ -95,7 +90,7 @@ This is the simple reference implementation. It uses explicit Python loops and i
 
 ```bash
 <PATH_TO_YOUR_ENV_PYTHON> run_pipeline.py \
-  --csv ../fer2013.csv \
+  --csv fer2013.csv \
   --implementation baseline \
   --classifier logreg \
   --log-file logreg_baseline.log
@@ -107,7 +102,7 @@ This implementation reduces Python-level overhead by replacing parts of the base
 
 ```bash
 <PATH_TO_YOUR_ENV_PYTHON> run_pipeline.py \
-  --csv ../fer2013.csv \
+  --csv fer2013.csv \
   --implementation numpy \
   --classifier logreg \
   --log-file logreg_numpy.log
@@ -119,7 +114,7 @@ This implementation keeps the NumPy-based workflow and uses Numba JIT to acceler
 
 ```bash
 <PATH_TO_YOUR_ENV_PYTHON> run_pipeline.py \
-  --csv ../fer2013.csv \
+  --csv fer2013.csv \
   --implementation numpy_numba \
   --classifier logreg \
   --log-file logreg_numpy_numba.log
@@ -131,7 +126,7 @@ This implementation uses the NumPy HOG path and applies multiprocessing across i
 
 ```bash
 <PATH_TO_YOUR_ENV_PYTHON> run_pipeline.py \
-  --csv ../fer2013.csv \
+  --csv fer2013.csv \
   --implementation numpy_parallel \
   --classifier logreg \
   --log-file logreg_numpy_parallel.log
@@ -143,7 +138,7 @@ This implementation combines the NumPy+Numba HOG path with multiprocessing acros
 
 ```bash
 <PATH_TO_YOUR_ENV_PYTHON> run_pipeline.py \
-  --csv ../fer2013.csv \
+  --csv fer2013.csv \
   --implementation numpy_numba_parallel \
   --classifier logreg \
   --log-file logreg_numpy_numba_parallel.log
@@ -155,7 +150,7 @@ If you want to test the pipeline quickly on a subset:
 
 ```bash
 <PATH_TO_YOUR_ENV_PYTHON> run_pipeline.py \
-  --csv ../fer2013.csv \
+  --csv fer2013.csv \
   --implementation baseline \
   --limit-train 300 \
   --limit-public 100 \
@@ -201,20 +196,18 @@ Each run prints:
 
 The same information is also written to the file given by `--log-file`.
 
-Important timing rows in the logs:
+Important timing rows in the logs (**You only need to care about these three things in the log**):
 
 - `feature_train:*`
 - `feature_public:*`
 - `feature_private:*`
 
-These are the full HOG feature-extraction times on the three FER2013 splits.
+Also, we printed multiple metrics. **The most straightforward metric is the Img/Sec (the rightmost column), which shows how many images it processes per second**
+
+The `classifier_*` rows are timing the classifier, telling us how much time was spent on classifier. It is not part of our optimization
 
 ## Notes
 
 - The baseline HOG is intentionally loop-heavy so that optimization targets are easy to see.
-- The optimized HOG keeps the same feature definition and should produce outputs very close to the baseline.
+- The optimized HOG keeps the same feature definition and should produce outputs very close to the baseline. **The output can be a little bit different than baseline because of rounding behavior.**
 - FER2013 is large enough that the pure Python baseline can be slow on the full dataset. That is expected.
-- Preferred implementation naming is compositional:
-  - `numpy_numba` means NumPy preprocessing plus Numba JIT
-  - `numpy_parallel` means NumPy plus multiprocessing across images
-  - `numpy_numba_parallel` combines NumPy, Numba JIT, and parallelism

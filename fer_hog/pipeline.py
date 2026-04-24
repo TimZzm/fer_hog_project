@@ -242,11 +242,11 @@ def main(argv: list[str] | None = None) -> int:
                 for message in run_correctness_checks(sample_images, config, implementations):
                     log(message)
 
-        benchmark_count = min(args.benchmark_images, splits.training.size)
-        if benchmark_count > 0:
-            log(f"Benchmarking HOG implementations on {benchmark_count} training images")
-            benchmark_images = splits.training.images[:benchmark_count]
-            benchmarks.extend(benchmark_hog_implementations(benchmark_images, config, n_jobs=args.n_jobs))
+        # benchmark_count = min(args.benchmark_images, splits.training.size)
+        # if benchmark_count > 0:
+        #     log(f"Benchmarking HOG implementations on {benchmark_count} training images")
+        #     benchmark_images = splits.training.images[:benchmark_count]
+        #     benchmarks.extend(benchmark_hog_implementations(benchmark_images, config, n_jobs=args.n_jobs))
 
         try:
             log(f"Extracting training features with {args.implementation}")

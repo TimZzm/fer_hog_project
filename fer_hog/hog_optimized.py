@@ -20,7 +20,7 @@ def compute_gradients_numpy(image: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
     image = image.astype(np.float32, copy=False)
     gx = np.empty_like(image, dtype=np.float32)
     gy = np.empty_like(image, dtype=np.float32)
-
+    # Here is the change. This should be a numpy grammar to avoid for loops
     gx[:, 1:-1] = image[:, 2:] - image[:, :-2]
     gx[:, 0] = image[:, 1] - image[:, 0]
     gx[:, -1] = image[:, -1] - image[:, -2]

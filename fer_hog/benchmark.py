@@ -35,17 +35,17 @@ def timed_call(func: Callable[..., Any], *args, **kwargs) -> tuple[Any, Benchmar
 
 def format_benchmark_table(results: list[BenchmarkResult]) -> str:
     header = (
-        f"{'Stage':<28} {'Seconds':>12} {'Items':>10} {'Sec/Image':>12} {'Img/Sec':>12}"
+        f"{'Stage':<37} {'Seconds':>10} {'Items':>8} {'Sec/Image':>10} {'Img/Sec':>12}"
     )
     lines = [header, "-" * len(header)]
     for result in results:
         sec_per_item = result.seconds_per_item
         throughput = result.throughput
         lines.append(
-            f"{result.stage:<28} "
-            f"{result.seconds:>12.4f} "
-            f"{'' if result.items is None else result.items:>10} "
-            f"{'' if sec_per_item is None else f'{sec_per_item:.6f}':>12} "
-            f"{'' if throughput is None else f'{throughput:.2f}':>12}"
+            f"{result.stage:<37} "
+            f"{result.seconds:>10.4f} "
+            f"{'' if result.items is None else result.items:>8} "
+            f"{'' if sec_per_item is None else f'{sec_per_item:.6f}':>10} "
+            f"{'' if throughput is None else f'{throughput:.1f}':>12}"
         )
     return "\n".join(lines)
